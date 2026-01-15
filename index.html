@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jose Rodriguez | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <canvas id="network-canvas"></canvas>
+    
+    <nav>
+    <div class="logo">JR<span style="color:#2563eb">.</span></div>
+    
+      <ul class="nav-links">
+        <li><a href="#about" data-i18n="nav-about">Sobre Mí</a></li>
+        <li><a href="#skills" data-i18n="nav-skills">Tecnologías</a></li>
+        <li><a href="#projects" data-i18n="nav-projects">Proyectos</a></li>
+        <li><button id="lang-toggle">English</button></li>
+      </ul>
+    </nav>
+
+    <header id="about" class="hero">
+        <div class="hero-content hidden">
+            <p class="intro-text" data-i18n="hero-intro">Hola, soy</p>
+            <h1>Jose Rodriguez</h1>
+            <p class="tagline" data-i18n="hero-tagline">Desarollador de software creativo para negocios modernos.</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn primary-btn" data-i18n="btn-projects">Ver Proyectos</a>
+                <a href="#contact" class="btn secondary-btn" data-i18n="btn-contact">Contactar</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="skills" class="container">
+        <h2 class="section-title hidden" data-i18n="section-skills">Arsenal Técnico</h2>
+        <div class="skills-grid hidden">
+            
+            <div class="skill-card">
+                <i class="fa-solid fa-mobile-screen skill-icon"></i>
+                <h3>Flutter</h3>
+                <p data-i18n="skill-flutter">Desarrollo Multiplataforma (Android/iOS/Desktop).</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-brands fa-swift skill-icon"></i>
+                <h3>Swift</h3>
+                <p data-i18n="skill-swift">Desarrollo nativo iOS & iPadOS.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-brands fa-android skill-icon"></i>
+                <h3>Kotlin</h3>
+                <p data-i18n="skill-kotlin">Arquitectura moderna Android & integraciones nativas.</p>
+            </div>
+
+            <div class="skill-card">
+                <i class="fa-brands fa-react skill-icon"></i>
+                <h3>React & Vue</h3>
+                <p data-i18n="skill-react">SPAs interactivas y gestión de estado.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-brands fa-js skill-icon"></i>
+                <h3>TypeScript</h3>
+                <p data-i18n="skill-ts">Lógica tipada segura y escalable.</p>
+            </div>
+
+            <div class="skill-card">
+                <i class="fa-brands fa-node skill-icon"></i>
+                <h3>Node.js</h3>
+                <p data-i18n="skill-node">APIs escalables y Microservicios.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-brands fa-python skill-icon"></i>
+                <h3>Python</h3>
+                <p data-i18n="skill-python">Scripting de datos e integración IA.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-database skill-icon"></i>
+                <h3>SQL / NoSQL</h3>
+                <p data-i18n="skill-db">PostgreSQL, Firebase & MongoDB.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-brands fa-docker skill-icon"></i>
+                <h3>Docker</h3>
+                <p data-i18n="skill-docker">Contenedores y pipelines CI/CD.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="projects" class="container">
+        <h2 class="section-title hidden" data-i18n="section-work">Proyectos Destacados</h2>
+        <div class="projects-grid">
+            
+            <div class="project-card hidden">
+                <img src="assets/pdv-thumbnail.jpg" alt="PDV System" class="project-img">
+                <div class="card-content">
+                    <h3 data-i18n="proj-1-title">Sistema PDV</h3>
+                    <p data-i18n="proj-1-desc">Punto de venta construido en Flutter para Windows y Tablets Android.</p>
+                    <div class="tech-stack">
+                        <span>Flutter</span><span>Windows</span><span>Android</span>
+                    </div>
+                    <a href="pdv.html" class="link-arrow" data-i18n="view-case">Ver Detalles &rarr;</a>
+                </div>
+            </div>
+
+            <div class="project-card hidden">
+                <img src="assets/mobile_thumbnail.jpg" alt="Grocery App" class="project-img">
+                <div class="card-content">
+                    <h3 data-i18n="proj-2-title">E-commerce Abarrotes</h3>
+                    <p data-i18n="proj-2-desc">App completa iOS/iPadOS y Android con código nativo.</p>
+                    <div class="tech-stack">
+                        <span>Flutter</span><span>Swift</span><span>Kotlin</span>
+                    </div>
+                    <a href="grocery.html" class="link-arrow" data-i18n="view-case">Ver Detalles &rarr;</a>
+                </div>
+            </div>
+
+            <div class="project-card hidden">
+                <img src="assets/kiosk_thumbnail.jpg" alt="Kiosk" class="project-img">
+                <div class="card-content">
+                    <h3 data-i18n="proj-3-title">Kiosco de Verificación</h3>
+                    <p data-i18n="proj-3-desc">Verificador de precios y recepción de inventario.</p>
+                    <div class="tech-stack">
+                        <span>Flutter</span><span>Kotlin</span><span>Hardware</span>
+                    </div>
+                    <a href="kiosk.html" class="link-arrow" data-i18n="view-case">Ver Detalles &rarr;</a>
+                </div>
+            </div>
+
+        </div> 
+    </section>
+
+    <footer id="contact">
+      <h2 data-i18n="footer-title">Iniciemos Colaboración</h2>
+      <p style="margin-top:10px; color: #6b7280;">jrodriguez@t-sty.mx</p>
+      
+      <a href="mailto:jrodriguez@t-sty.mx" class="btn primary-btn" style="margin-top:20px;" data-i18n="btn-email">Enviar Mensaje</a>
+      
+      <p style="margin-top:30px; opacity:0.6;">&copy; <span id="year"></span> JR.CORTEX Development.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

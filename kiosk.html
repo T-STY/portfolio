@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jose Rodriguez | Kiosk App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background: #f8f9fa;">
+
+    <nav>
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+            <div class="logo">JR<span style="color:#2563eb">.</span></div>
+        </a>
+        <button id="lang-toggle" style="margin-left: auto;">English</button>
+    </nav>
+
+    <div class="container" style="text-align: center; max-width: 1400px; margin: 0 auto;">
+        
+        <h1 style="font-family: 'Playfair Display'; font-size: 3rem; margin-bottom: 60px;" data-i18n="kiosk-title">Kiosco de Verificación</h1>
+
+        <div style="padding: 40px 0 100px 0;">
+            <div class="device-emulator frame-kiosk"> 
+                
+                <div class="kiosk-header">
+                    <div class="kiosk-camera"></div>
+                    <div class="kiosk-sensor"></div>
+                </div>
+
+                <div class="device-screen" id="app-screen">
+                    <div class="app-poster" id="poster">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?auto=format&fit=crop&w=1200&q=80" alt="Kiosk Preview">
+                        <div class="play-overlay">
+                            <button class="launch-btn" onclick="launchApp()">
+                                <i class="fa-solid fa-play"></i> <span data-i18n="btn-launch">Launch App</span>
+                            </button>
+                        </div>
+                    </div>
+                    <iframe id="app-frame" src="about:blank" frameborder="0"></iframe>
+                </div>
+
+                <div class="kiosk-branding">
+                    <img src="assets/t_sty.jpg" alt="T_STY">
+                </div>
+
+                <div class="kiosk-scanner-module">
+                    <div class="scan-window">
+                        <div class="scan-laser"></div>
+                    </div>
+                    <span class="scan-label">SCAN BARCODE</span>
+                </div>
+            </div>
+        </div>
+        <div class="doc-container">
+            
+            <div class="credentials-card">
+                <div class="cred-header">
+                    <i class="fa-solid fa-id-card"></i>
+                    <h3 data-i18n="kiosk-creds-title">Acceso Administrativo</h3>
+                </div>
+                <p data-i18n="kiosk-creds-desc" style="margin-bottom: 20px; opacity: 0.8;">
+                    La vista de cliente es pública. Para acceder a las funciones de administración e inventario, utilice las siguientes credenciales:
+                </p>
+                
+                <div class="creds-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px;">
+                    <div class="cred-item">
+                        <span class="cred-label" data-i18n="cred-email">Email</span>
+                        <code class="cred-value">soporte@t-sty.mx</code>
+                    </div>
+                    <div class="cred-item">
+                        <span class="cred-label" data-i18n="cred-pass">Password</span>
+                        <code class="cred-value">12345678</code>
+                    </div>
+                    <div class="cred-item">
+                        <span class="cred-label" data-i18n="cred-access-code">Access Code</span>
+                        <code class="cred-value">908375</code>
+                    </div>
+                </div>
+            </div>
+
+            <section class="doc-section text-left">
+                <h2 data-i18n="kiosk-overview-title">Solución de Autoservicio</h2>
+                <p data-i18n="kiosk-overview-text">
+                    Una terminal interactiva diseñada para reducir la carga operativa del personal. Funciona en dos modos: "Verificador de Precios" para clientes (siempre activo, interfaz simplificada) y "Recepción de Mercancía" para empleados (protegido por PIN, escaneo masivo).
+                </p>
+            </section>
+
+            <div class="doc-grid">
+                <div class="doc-card">
+                    <div class="doc-icon"><i class="fa-solid fa-barcode"></i></div>
+                    <h3 data-i18n="kiosk-feat-scan-title">Escaneo Ultrarrápido</h3>
+                    <p data-i18n="kiosk-feat-scan-desc">
+                        Optimizado para escáneres láser industriales (Zebra/Honeywell) y cámaras de alta definición. Respuesta en < 100ms.
+                    </p>
+                </div>
+
+                <div class="doc-card">
+                    <div class="doc-icon"><i class="fa-solid fa-box-open"></i></div>
+                    <h3 data-i18n="kiosk-feat-inventory-title">Entrada de Stock</h3>
+                    <p data-i18n="kiosk-feat-inventory-desc">
+                        Permite al staff escanear entregas completas rápidamente, validando contra órdenes de compra y actualizando el inventario central.
+                    </p>
+                </div>
+
+                <div class="doc-card">
+                    <div class="doc-icon"><i class="fa-solid fa-gift"></i></div>
+                    <h3 data-i18n="kiosk-feat-rewards-title">Programa de Lealtad</h3>
+                    <p data-i18n="kiosk-feat-rewards-desc">
+                        Interfaz táctil para registro de clientes. Incluye teclado virtual numérico para ingreso de ID telefónico y creación de NIP seguro para monederos electrónicos.
+                    </p>
+                </div>
+                
+                <div class="doc-card">
+                    <div class="doc-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3 data-i18n="kiosk-feat-security-title">Modo Kiosco</h3>
+                    <p data-i18n="kiosk-feat-security-desc">
+                        Interfaz bloqueada (Kiosk Mode) que impide la salida de la aplicación, asegurando que el dispositivo se use exclusivamente para su propósito.
+                    </p>
+                </div>
+            </div>
+
+            <section class="doc-section text-left" style="margin-top: 60px;">
+                <h2 data-i18n="pdv-tech-title">Especificaciones Técnicas</h2>
+                <ul class="tech-spec-list">
+                    <li><strong data-i18n="spec-front">Framework:</strong> Flutter (Android Embedder).</li>
+                    <li><strong data-i18n="spec-hardware">Hardware:</strong> Integration with HID Scanners & Serial Port.</li>
+                    <li><strong data-i18n="spec-sync">Sync:</strong> WebSocket connection for instant price updates.</li>
+                    <li><strong data-i18n="spec-loyalty">Loyalty:</strong> Real-time customer registration & points tracking.</li>
+                </ul>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function launchApp() {
+            document.getElementById('poster').style.display = 'none';
+            // DEMO URL
+            document.getElementById('app-frame').src = "https://jr-cortex-kiosk.web.app"; 
+            document.getElementById('app-frame').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

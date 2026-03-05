@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jose Rodriguez | PDV Documentation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body style="background: #f8f9fa;">
+<body style="background: #0c0c0c; color: #f0ede8;">
 
     <nav>
         <a href="index.html" style="text-decoration: none; color: inherit;">
@@ -17,9 +17,9 @@
         <button id="lang-toggle" style="margin-left: auto;">English</button>
     </nav>
 
-    <div class="container" style="text-align: center; max-width: 1400px; margin: 0 auto;">
+    <div class="container" style="text-align: center; max-width: 1400px; margin: 0 auto; background: #0c0c0c;">
         
-        <h1 style="font-family: 'Playfair Display'; font-size: 3rem; margin-bottom: 60px;" data-i18n="pdv-title">Sistema PDV</h1>
+        <h1 style="font-family: 'Barlow Condensed', sans-serif; font-size: 3rem; font-weight: 900; text-transform: uppercase; letter-spacing: -1px; margin-bottom: 60px; color: #f0ede8;" data-i18n="pdv-title">Sistema PDV</h1>
 
         <div class="desk-surface">
             <div class="peripheral printer-unit">
@@ -79,7 +79,7 @@
                 
                 <div class="creds-grid">
                     <div class="cred-item">
-                        <span class="cred-label">Email</span>
+                        <span class="cred-label" data-i18n="cred-email">Email</span>
                         <code class="cred-value">soporte@t-sty.mx</code>
                     </div>
                     <div class="cred-item">
@@ -95,7 +95,7 @@
 
             <section class="doc-section text-left">
                 <h2 data-i18n="pdv-overview-title">Arquitectura del Sistema</h2>
-                <p data-i18n="pdv-overview-text">
+                <p data-i18n="pdv-overview-text" style="color: #888580;">
                     Diseñado para entornos de alto volumen, este Punto de Venta une la flexibilidad web con el rendimiento nativo. Construido con Flutter, despliega una base de código unificada para tabletas Android (movilidad) y escritorio Windows (caja principal).
                 </p>
             </section>
@@ -147,7 +147,7 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
     <script>
         function launchApp() {
             document.getElementById('poster').style.display = 'none';

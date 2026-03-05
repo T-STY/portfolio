@@ -3,143 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jose Rodriguez | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <title>Jose Rodriguez | T_STY Development</title>
+    <meta name="description" content="Jose Rodriguez — Flutter & native mobile developer. Founder of JR.CORTEX Development.">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <canvas id="network-canvas"></canvas>
-    
+
+    <!-- NAV -->
     <nav>
-    <div class="logo">JR<span style="color:#2563eb">.</span></div>
-    
-      <ul class="nav-links">
-        <li><a href="#about" data-i18n="nav-about">Sobre Mí</a></li>
-        <li><a href="#skills" data-i18n="nav-skills">Tecnologías</a></li>
-        <li><a href="#projects" data-i18n="nav-projects">Proyectos</a></li>
-        <li><button id="lang-toggle">English</button></li>
-      </ul>
+        <div class="logo">JR<span class="logo-dot">.</span></div>
+        <ul class="nav-links">
+            <li><a href="#about" data-i18n="nav-about">SOBRE MÍ</a></li>
+            <li><a href="#services" data-i18n="nav-services">SERVICIOS</a></li>
+            <li><a href="#skills" data-i18n="nav-skills">STACK</a></li>
+            <li><a href="#projects" data-i18n="nav-projects">PROYECTOS</a></li>
+            <li><button id="lang-toggle">EN</button></li>
+        </ul>
     </nav>
 
+    <!-- HERO -->
     <header id="about" class="hero">
-        <div class="hero-content hidden">
-            <p class="intro-text" data-i18n="hero-intro">Hola, soy</p>
-            <h1>Jose Rodriguez</h1>
-            <p class="tagline" data-i18n="hero-tagline">Desarollador de software creativo para negocios modernos.</p>
-            <div class="hero-btns">
-                <a href="#projects" class="btn primary-btn" data-i18n="btn-projects">Ver Proyectos</a>
-                <a href="#contact" class="btn secondary-btn" data-i18n="btn-contact">Contactar</a>
+        <div class="hero-inner">
+            <div class="hero-meta">
+                <span class="mono-label" data-i18n="hero-available">● DISPONIBLE PARA PROYECTOS</span>
+                <span class="mono-label">COLIMA, MX</span>
+            </div>
+            <div class="h-rule"></div>
+
+            <div class="hero-name-block">
+                <h1 class="hero-name">
+                    <span class="name-line" style="--d:0ms">JOSE</span>
+                    <span class="name-line" style="--d:80ms">RODRIGUEZ</span>
+                </h1>
+                <div class="hero-right">
+                    <p class="hero-tagline" style="--d:200ms" data-i18n="hero-tagline">
+                        Ingeniería de software creativa<br>y desarrollo móvil nativo.
+                    </p>
+                    <p class="hero-bio" style="--d:320ms" data-i18n="hero-bio">
+                        Fundador de T_STY Development. Construyo aplicaciones
+                        móviles, sistemas PDV y plataformas e-commerce de alto
+                        rendimiento para negocios modernos.
+                    </p>
+                    <div class="hero-actions" style="--d:440ms">
+                        <a href="#projects" class="cta-primary" data-i18n="btn-projects">Ver Proyectos</a>
+                        <a href="#contact" class="cta-ghost" data-i18n="btn-contact">Iniciar Proyecto</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-rule"></div>
+            <div class="hero-bottom-row">
+                <span class="mono-label">Flutter · Swift · Kotlin · Firebase · Node.js</span>
+                <a href="mailto:jrodriguez@t-sty.mx" class="mono-label email-link">jrodriguez@t-sty.mx</a>
             </div>
         </div>
     </header>
 
-    <section id="skills" class="container">
-        <h2 class="section-title hidden" data-i18n="section-skills">Arsenal Técnico</h2>
-        <div class="skills-grid hidden">
-            
-            <div class="skill-card">
-                <i class="fa-solid fa-mobile-screen skill-icon"></i>
-                <h3>Flutter</h3>
-                <p data-i18n="skill-flutter">Desarrollo Multiplataforma (Android/iOS/Desktop).</p>
+    <!-- SERVICES -->
+    <section id="services" class="section">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-num">01</span>
+                <h2 class="section-title" data-i18n="section-services">SERVICIOS</h2>
             </div>
-            <div class="skill-card">
-                <i class="fa-brands fa-swift skill-icon"></i>
-                <h3>Swift</h3>
-                <p data-i18n="skill-swift">Desarrollo nativo iOS & iPadOS.</p>
+            <div class="services-list">
+                <div class="service-row js-reveal">
+                    <div class="srv-body">
+                        <h3 data-i18n="srv-1-title">Aplicaciones Móviles</h3>
+                        <p data-i18n="srv-1-desc">Apps nativas iOS y Android con Flutter. Una base de código, rendimiento nativo, interfaces listas para producción.</p>
+                    </div>
+                    <ul class="srv-tags">
+                        <li>Flutter</li><li>iOS</li><li>Android</li><li>Desktop</li>
+                    </ul>
+                </div>
+                <div class="service-row js-reveal">
+                    <div class="srv-body">
+                        <h3 data-i18n="srv-2-title">Sistemas PDV &amp; Retail</h3>
+                        <p data-i18n="srv-2-desc">Puntos de venta robustos con integración de hardware: impresoras ESC/POS, escáneres HID y terminales de pago.</p>
+                    </div>
+                    <ul class="srv-tags">
+                        <li>Flutter</li><li>Windows</li><li>Android</li><li>ESC/POS</li>
+                    </ul>
+                </div>
+                <div class="service-row js-reveal">
+                    <div class="srv-body">
+                        <h3 data-i18n="srv-3-title">E-commerce &amp; Delivery</h3>
+                        <p data-i18n="srv-3-desc">Plataformas de comercio con catálogos en tiempo real, notificaciones push segmentadas y seguimiento de entregas.</p>
+                    </div>
+                    <ul class="srv-tags">
+                        <li>Firebase</li><li>Maps API</li><li>FCM</li>
+                    </ul>
+                </div>
+                <div class="service-row js-reveal">
+                    <div class="srv-body">
+                        <h3 data-i18n="srv-4-title">Kioscos &amp; Autoservicio</h3>
+                        <p data-i18n="srv-4-desc">Terminales interactivas en modo kiosco para verificación de precios, programas de lealtad y recepción de inventario.</p>
+                    </div>
+                    <ul class="srv-tags">
+                        <li>Kiosk Mode</li><li>Kotlin</li><li>HID</li>
+                    </ul>
+                </div>
             </div>
-            <div class="skill-card">
-                <i class="fa-brands fa-android skill-icon"></i>
-                <h3>Kotlin</h3>
-                <p data-i18n="skill-kotlin">Arquitectura moderna Android & integraciones nativas.</p>
-            </div>
-
-            <div class="skill-card">
-                <i class="fa-brands fa-react skill-icon"></i>
-                <h3>React & Vue</h3>
-                <p data-i18n="skill-react">SPAs interactivas y gestión de estado.</p>
-            </div>
-            <div class="skill-card">
-                <i class="fa-brands fa-js skill-icon"></i>
-                <h3>TypeScript</h3>
-                <p data-i18n="skill-ts">Lógica tipada segura y escalable.</p>
-            </div>
-
-            <div class="skill-card">
-                <i class="fa-brands fa-node skill-icon"></i>
-                <h3>Node.js</h3>
-                <p data-i18n="skill-node">APIs escalables y Microservicios.</p>
-            </div>
-            <div class="skill-card">
-                <i class="fa-brands fa-python skill-icon"></i>
-                <h3>Python</h3>
-                <p data-i18n="skill-python">Scripting de datos e integración IA.</p>
-            </div>
-            <div class="skill-card">
-                <i class="fa-solid fa-database skill-icon"></i>
-                <h3>SQL / NoSQL</h3>
-                <p data-i18n="skill-db">PostgreSQL, Firebase & MongoDB.</p>
-            </div>
-            <div class="skill-card">
-                <i class="fa-brands fa-docker skill-icon"></i>
-                <h3>Docker</h3>
-                <p data-i18n="skill-docker">Contenedores y pipelines CI/CD.</p>
-            </div>
-
         </div>
     </section>
 
-    <section id="projects" class="container">
-        <h2 class="section-title hidden" data-i18n="section-work">Proyectos Destacados</h2>
-        <div class="projects-grid">
-            
-            <div class="project-card hidden">
-                <img src="assets/pdv-thumbnail.jpg" alt="PDV System" class="project-img">
-                <div class="card-content">
-                    <h3 data-i18n="proj-1-title">Sistema PDV</h3>
-                    <p data-i18n="proj-1-desc">Punto de venta construido en Flutter para Windows y Tablets Android.</p>
-                    <div class="tech-stack">
-                        <span>Flutter</span><span>Windows</span><span>Android</span>
+    <!-- SKILLS -->
+    <section id="skills" class="section section-alt">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-num">02</span>
+                <h2 class="section-title" data-i18n="section-skills">STACK TÉCNICO</h2>
+            </div>
+            <div class="skills-table">
+                <div class="skill-group js-reveal">
+                    <span class="skill-category" data-i18n="cat-mobile">MOBILE</span>
+                    <div class="skill-items">
+                        <div class="skill-item"><i class="fa-solid fa-mobile-screen"></i><span>Flutter</span></div>
+                        <div class="skill-item"><i class="fa-brands fa-swift"></i><span>Swift</span></div>
+                        <div class="skill-item"><i class="fa-brands fa-android"></i><span>Kotlin</span></div>
                     </div>
-                    <a href="pdv.html" class="link-arrow" data-i18n="view-case">Ver Detalles &rarr;</a>
+                </div>
+                <div class="skill-group js-reveal">
+                    <span class="skill-category" data-i18n="cat-web">WEB</span>
+                    <div class="skill-items">
+                        <div class="skill-item"><i class="fa-brands fa-react"></i><span>React</span></div>
+                        <div class="skill-item"><i class="fa-brands fa-vuejs"></i><span>Vue</span></div>
+                        <div class="skill-item"><i class="fa-brands fa-js"></i><span>TypeScript</span></div>
+                    </div>
+                </div>
+                <div class="skill-group js-reveal">
+                    <span class="skill-category" data-i18n="cat-back">BACKEND</span>
+                    <div class="skill-items">
+                        <div class="skill-item"><i class="fa-brands fa-node"></i><span>Node.js</span></div>
+                        <div class="skill-item"><i class="fa-brands fa-python"></i><span>Python</span></div>
+                        <div class="skill-item"><i class="fa-solid fa-database"></i><span>SQL/NoSQL</span></div>
+                    </div>
+                </div>
+                <div class="skill-group js-reveal">
+                    <span class="skill-category" data-i18n="cat-infra">INFRA</span>
+                    <div class="skill-items">
+                        <div class="skill-item"><i class="fa-brands fa-docker"></i><span>Docker</span></div>
+                        <div class="skill-item"><i class="fa-solid fa-fire"></i><span>Firebase</span></div>
+                        <div class="skill-item"><i class="fa-brands fa-google"></i><span>GCP</span></div>
+                    </div>
                 </div>
             </div>
-
-            <div class="project-card hidden">
-                <img src="assets/mobile_thumbnail.jpg" alt="Grocery App" class="project-img">
-                <div class="card-content">
-                    <h3 data-i18n="proj-2-title">E-commerce Abarrotes</h3>
-                    <p data-i18n="proj-2-desc">App completa iOS/iPadOS y Android con código nativo.</p>
-                    <div class="tech-stack">
-                        <span>Flutter</span><span>Swift</span><span>Kotlin</span>
-                    </div>
-                    <a href="grocery.html" class="link-arrow" data-i18n="view-case">Ver Detalles &rarr;</a>
-                </div>
-            </div>
-
-            <div class="project-card hidden">
-                <img src="assets/kiosk_thumbnail.jpg" alt="Kiosk" class="project-img">
-                <div class="card-content">
-                    <h3 data-i18n="proj-3-title">Kiosco de Verificación</h3>
-                    <p data-i18n="proj-3-desc">Verificador de precios y recepción de inventario.</p>
-                    <div class="tech-stack">
-                        <span>Flutter</span><span>Kotlin</span><span>Hardware</span>
-                    </div>
-                    <a href="kiosk.html" class="link-arrow" data-i18n="view-case">Ver Detalles &rarr;</a>
-                </div>
-            </div>
-
-        </div> 
+        </div>
     </section>
 
-    <footer id="contact">
-      <h2 data-i18n="footer-title">Iniciemos Colaboración</h2>
-      <p style="margin-top:10px; color: #6b7280;">jrodriguez@t-sty.mx</p>
-      
-      <a href="mailto:jrodriguez@t-sty.mx" class="btn primary-btn" style="margin-top:20px;" data-i18n="btn-email">Enviar Mensaje</a>
-      
-      <p style="margin-top:30px; opacity:0.6;">&copy; <span id="year"></span> JR.CORTEX Development.</p>
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-num">03</span>
+                <h2 class="section-title" data-i18n="section-work">PROYECTOS</h2>
+            </div>
+            <div class="projects-list">
+                <a href="pdv.html" class="project-row js-reveal">
+                    <div class="proj-number">01</div>
+                    <div class="proj-info">
+                        <h3 class="proj-title" data-i18n="proj-1-title">Sistema PDV</h3>
+                        <p class="proj-desc" data-i18n="proj-1-desc">Punto de Venta omnicanal. Inventarios masivos, sincronización en tiempo real y operaciones offline para retail moderno.</p>
+                    </div>
+                    <div class="proj-stack">
+                        <span>Flutter</span><span>Windows</span><span>Android</span>
+                    </div>
+                    <span class="proj-arrow">&#8599;</span>
+                </a>
+                <a href="grocery.html" class="project-row js-reveal">
+                    <div class="proj-number">02</div>
+                    <div class="proj-info">
+                        <h3 class="proj-title" data-i18n="proj-2-title">E-commerce Abarrotes</h3>
+                        <p class="proj-desc" data-i18n="proj-2-desc">Plataforma de comercio móvil completa con gestión de pedidos en vivo, pagos seguros y seguimiento de entregas.</p>
+                    </div>
+                    <div class="proj-stack">
+                        <span>Flutter</span><span>Swift</span><span>Kotlin</span>
+                    </div>
+                    <span class="proj-arrow">&#8599;</span>
+                </a>
+                <a href="kiosk.html" class="project-row js-reveal">
+                    <div class="proj-number">03</div>
+                    <div class="proj-info">
+                        <h3 class="proj-title" data-i18n="proj-3-title">Kiosco de Verificación</h3>
+                        <p class="proj-desc" data-i18n="proj-3-desc">Terminal de autoservicio para verificación de precios y recepción de inventario, optimizada para hardware dedicado.</p>
+                    </div>
+                    <div class="proj-stack">
+                        <span>Flutter</span><span>Kotlin</span><span>Hardware</span>
+                    </div>
+                    <span class="proj-arrow">&#8599;</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="footer">
+        <div class="footer-inner">
+            <div class="h-rule footer-rule-top"></div>
+            <div class="footer-main">
+                <div class="footer-left">
+                    <div class="footer-logo">JR<span class="logo-dot">.</span></div>
+                    <p class="footer-company">T_STY DEVELOPMENT</p>
+                </div>
+                <div class="footer-center">
+                    <h2 class="footer-cta" data-i18n="footer-title">Iniciemos<br>Colaboración</h2>
+                </div>
+                <div class="footer-right">
+                    <p class="footer-sub" data-i18n="footer-sub">Software de alto rendimiento<br>para negocios modernos.</p>
+                    <a href="mailto:jrodriguez@t-sty.mx" class="cta-primary" data-i18n="btn-email">Iniciar Proyecto</a>
+                </div>
+            </div>
+            <div class="h-rule footer-rule-bottom"></div>
+            <div class="footer-bottom">
+                <span class="mono-label">jrodriguez@t-sty.mx</span>
+                <span class="mono-label">&copy; <span id="year"></span> T_STY Development</span>
+                <span class="mono-label">Colima, MX</span>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
